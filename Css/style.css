@@ -21,6 +21,9 @@ a{
 	color:#000;
 	text-decoration:none;
 }
+a:not(nav a:first-child, nav a:nth-child(2)):hover{
+    text-decoration: underline;
+}
 *{ 
 	box-sizing:border-box;
 }
@@ -77,52 +80,45 @@ header *:hover{
 
 
 /* Main */
-main form img{
+main img{
     width: 30rem;
     display: block;
     margin: 3rem auto;
 }
-main form div{
+main form{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main form div span:first-of-type{
+main form span:first-of-type{
     order: -1;
     position: relative;
     left: 4rem;
 }
-main form div span:nth-child(3){
+main form span:nth-child(3){
     position: relative;
     right: 4rem;
 }
-main form div input{
+main form input{
     border: 0.2rem solid rgb(237, 237, 237);
     border-radius: 3rem;
     width: 60rem;
     height: 4.5rem;
 }
-main form div input:hover{
+main form input:hover{
     box-shadow: 0rem 0.5rem 1.5rem rgba(224, 223, 223, 0.874);
 }
-main form div input[placeholder]{
+main form input[placeholder]{
     padding-left: 5rem;
 }
 main nav {
     text-align: center;
     margin-top: 3.5rem;
 }
-main nav a:first-child{
+main nav *{
     color: #423834;
     padding: 0.75rem 1.5rem;
     background-color: whitesmoke;
-    margin-right: 1rem;
-}
-main nav a:nth-child(2){
-    color: #423834;
-    padding: 0.75rem 1.5rem;
-    background-color: whitesmoke;
-    margin-left: 1rem;
 }
 main nav *:hover{
     box-shadow: 0rem 0.5rem 1rem rgba(224, 223, 223, 0.874);
@@ -136,9 +132,7 @@ main p{
 main p a {
     color: blue;
 }
-main p a:hover{
-    text-decoration:underline;
-}
+
 
 
 /* Footer */
@@ -159,15 +153,16 @@ footer h4{
 footer div {
     background-color: whitesmoke;
     margin-top: -1rem;
-    padding-bottom: 2rem;
 }
 footer div .title {
+    border-top: 0.2rem solid rgb(225, 224, 224);
     display: block;
     text-align: center;
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #928b88;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
 }
 footer div .left{
     padding-right: 10rem;
